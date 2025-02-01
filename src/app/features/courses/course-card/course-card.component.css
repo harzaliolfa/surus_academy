@@ -1,0 +1,50 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+.card{
+    border: none;
+    height: 400px;
+}
+.card-img-container{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+
+}
+.card-img-top{
+    border-radius: 10px;
+    height: 100%;
+
+}
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    width: 48%;
+    margin: 5px;
+    text-align: start;
+    padding-left: 2%;
+    padding-right: 1%;
+    
+}
+.card-body{
+    padding: 15px 0 0 ;
+}
+.button-icon{
+    float: right;
+}
+
+.card-text{
+    color: #696984;
+    font-size: 14px;
+
+}
+.card-title{
+    font-size: 20px;
+}

@@ -1,1 +1,44 @@
-<p>courses-home works!</p>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    @if (images) {
+	<ngb-carousel>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[0]"/>
+			</div>
+			<div class="carousel-caption">
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[1]"/>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[2]" />
+			</div>
+		</ng-template>
+	</ngb-carousel>
+}
+</div>
+
+<div class="courses-description">
+    <p>
+        is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, 
+        remaining essentially unchanged. 
+        It was popularised in the 1960s with the release of Letraset she
+    </p>
+</div>
+<div>
+    <div class="courses-list-header">
+        
+        <h1 class="courses-list-title">Our Courses</h1>
+        <p class="courses-list-description">Let's join our famous Courses, the knowledge provided will definitely be useful for you.</p>
+    </div>
+</div>
+
+
+<app-courses-list></app-courses-list>

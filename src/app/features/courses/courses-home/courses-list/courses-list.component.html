@@ -1,1 +1,6 @@
-<p>courses-list works!</p>
+<div class="card-group" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;" >
+    @for(course of courseList; track course.id){
+    <app-course-card  [course]="course"></app-course-card>
+    }
+</div>
+
