@@ -1,9 +1,12 @@
-export interface Course {
-    id: number;
-    name: string;
-    description: string;
-    price?: number;
-    isTopRated?: boolean;
-    date?: string;
-    imgURL: string;
+export class Course {
+
+
+     constructor(
+        public id: number, 
+        public name: string, 
+        public description: string, 
+        public price?: number, 
+        public isTopRated?: boolean, 
+        public date?: string, 
+        public imgURL?: string) {}
 }

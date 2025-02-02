@@ -1,6 +1,6 @@
 
 .carousel, .carousel .picsum-img-wrapper, .carousel img {
-    width: 100vw;  /* 100% of the viewport width */
+    width: 100%;  /* 100% of the viewport width */
     height: 50vh; /* 100% of the viewport height */
 }
 .courses-description{
