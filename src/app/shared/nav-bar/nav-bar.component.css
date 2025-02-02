@@ -1,89 +1,157 @@
-
-.nabvar {
+.my-navbar {
+    position: relative;
     padding: 10px 20px;   
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- 
+    color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    
 }
-.navbar-right{
-    padding-right: 20px;
+.my-serach-bar{
+    display: flex;
+    width: 28%;
+    position: absolute;
+    left: 15%;
 }
 
-.navbar-center{
+.my-serach-bar input{
+    position: relative fixed;
+    padding: 10px;
+}
+
+.explore-btn{
+    position: absolute;
+    right: 0;
+    list-style-type: none;
+    color: #5bbae3;
+    background-color: #f3fffb;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 100px;
+    padding: 5px 8px;
+    margin-top: 5px;
+    margin-right: 13px;
+}
+
+
+.start-learning-button{
+    background-color: #33a0d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 190px;
+    font-size: 17px;
+    font-weight: 500;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
 
 }
-.navbar-center a {
-    text-decoration: none;
+
+.my-center-navbar{
+    position: absolute;
+    right: 0;
+    margin-right: 20%;
+
+}
+.my-nav-item a{
     margin: 0 8px;
     padding: 5px 8px; 
     color: #070707;
     cursor: pointer;
     font-size: 17px;
     font-weight: 500;
-
 }
-.navbar-center .active{
+
+.my-nav-item  .active{
     color: #42a7d5;
 }
-
-.navbar-left{
-    margin : 0 2%;
-    width: 40%;
-    display: flex;
-    
-} 
-
-.search-bar{
-    display: flex;
-    padding: 8px;
-    width: 80%;
-    
-}
-
-.search-bar input{
-    border-radius: 8px;
-    padding: 8px 8px;
-    box-shadow: 5px 5px 5px rgba(24, 23, 23, 0.1);
-    border: none;
-    width: 87%;
-    height: 50px;
-    position: relative;
-    margin-left: 15%;
-}
-
-.explore-btn{
-    border: none;
-    color: #5bbae3;
-    background-color: #f3fffb;
-    padding: 8px; 
-    font-size: 18px;
-   border-radius: 8px;
-   width: 100px;
-   display: flex;
-   position: absolute;
-    transform: translateX(360%);
-    margin-top: 5px;
-}
-
-.search-bar .input  :focus{
-    
-}
-.explore-btn span{
-    padding:0 6px;
-}
-
-.cta-btn{
-    background-color: #33a0d2;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    margin: 11px 60px;
-    padding: 10px;
-    width: 70%;
-}
-
-
 
 .logo {
     height: 50px; /* Sets the logo height to 50px */
     margin-right: 15px; /* Adds spacing between logo and search bar */
 }
+.my-container-fluid{
+    height: 50px;
+}
+
+
+/* Keep the toggler button fixed */
+.my-toggler-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensures it's above other elements */
+  }
+  
+  /* Change border color when toggler is clicked (expanded) */
+  .my-toggler-btn:focus,
+  .my-toggler-btn[aria-expanded="true"] {
+    outline: none;
+    border: 2px solid #33a0dd;
+  }
+  .my-toggler-btn:focus,
+  .my-toggler-btn:active {
+    outline: none; /* Removes the default black outline */
+    border: 2px solid #33a0dd; /* Ensures the blue border remains */
+    box-shadow: 0 0 5px #33a0dd; /* Optional: Adds a subtle blue glow */
+}
+.start-learning-button .short-text {
+    display: none; /* Hide short text by default */
+}
+
+
+
+
+@media (max-width: 1227px) {
+    .start-learning-button{
+        width: 150px;
+        padding: 6px;
+        
+    }
+
+    .my-nav-item a{
+        margin: 0 2px;
+        padding: 5px 8px; 
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .start-learning-button .full-text {
+        display: none; /* Hide long text */
+    }
+
+    .start-learning-button .short-text {
+        display: inline; /* Show short text */
+    }
+  }
+
+
+
+  
+  @media (max-width: 995px) {
+   .my-container-fluid{
+    position: relative;
+    height: 290px;
+   }
+    .my-center-navbar{
+        position: absolute;
+        left: 0;
+        margin-top: 70px;
+    }
+    .my-serach-bar{
+        position: absolute;
+        left: 0;
+        margin-top: 15px;
+        width: 60%;
+
+    }
+    .start-learning-button{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+    }
+    .my-nav-item a{
+        padding: 8px 10px ;
+    }
+  }

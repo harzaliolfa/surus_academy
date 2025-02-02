@@ -1,0 +1,36 @@
+.footer{
+    background-color: #0f1828;
+    height: 500px;
+    padding: 10px;
+}
+.footer-section {
+    width: 30%;
+    margin: 50px;
+}
+
+.footer-logo{
+    margin: 50px;
+}
+.footer-section h4{
+    color: #808a9c;
+}
+.footer-section a {
+    text-decoration: none;
+    color: #d5d8dd;
+}
+.footer-section li{
+    list-style-type: none;
+}
+.footer-links {
+    display: flex;
+    width: 70%;
+}
+
+.footer-content{
+    display: flex;
+
+}
+.footer-bottom p{
+    color: #808a9c;
+    transform: translateY();
+}
