@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* Override Bootstrap primary color */
+.btn-primary {
+    background-color: #22A1D6 !important;
+    border-color: #22A1D6 !important;
+  }
+  
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .nav-link.show,
+  .navbar-light .navbar-nav .nav-link {
+    color: #22A1D6 !important;
+  }
+  
+  .card-header {
+    background-color: #22A1D6 !important;
+  }
+  
+  .bg-primary {
+    background-color: #22A1D6 !important;
+  }
+  
+  .text-primary {
+    color: #22A1D6 !important;
+  }
+
+  .btn-outline-primary{
+    color: #22A1D6 !important;
+    border-color: #22A1D6 !important;
+  }
+  

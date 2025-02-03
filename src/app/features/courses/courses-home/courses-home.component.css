@@ -1,0 +1,20 @@
+
+.carousel, .carousel .picsum-img-wrapper, .carousel img {
+    width: 100%;  /* 100% of the viewport width */
+    height: 50vh; /* 100% of the viewport height */
+}
+.courses-description{
+    margin-bottom: 10px;
+    color: #696984;
+    padding: 1rem;
+}
+.courses-list-title{
+   color: #22A1D6;
+   font-size: 1.5rem;
+}
+.courses-list-header , .explore-programs{
+    padding: 1rem 1rem 0 1rem ;
+}
+.courses-list-description{
+    color: #696984;
+}
