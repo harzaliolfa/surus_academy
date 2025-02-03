@@ -1,19 +1,28 @@
-.footer{
-    background-color: #0f1828;
+
+a {
+    text-decoration: none;
+    color: #d5d8dd;
+    
+}
+.my-footer{
+    background-color: #101722;
     height: 500px;
     padding: 10px;
 }
-.footer-section {
-    width: 30%;
-    margin: 50px;
+.my-container{
+    margin-top: 50px;
 }
 
 .footer-logo{
-    margin: 50px;
+    margin: 2%;
 }
-.footer-section h4{
+h4{
     color: #808a9c;
 }
+.footer-section{
+    width: 20%;
+}
+
 .footer-section a {
     text-decoration: none;
     color: #d5d8dd;
@@ -21,16 +30,76 @@
 .footer-section li{
     list-style-type: none;
 }
-.footer-links {
-    display: flex;
-    width: 70%;
-}
+
 
 .footer-content{
     display: flex;
-
+}
+.footer-bottom{
+    color: #808a9c;
+    margin-left: 5%;
+    position: relative;
+    max-height: 100px;
 }
 .footer-bottom p{
-    color: #808a9c;
-    transform: translateY();
+    margin-top: 150px;
+}
+
+.my-icons{
+    margin-top: 150px;
+}
+
+.my-icon {
+    margin: 35px;
+    margin-right: 30%;
+}
+
+@media (max-width: 769px) {
+
+    .footer-section{
+        margin-left: 10%;
+    }
+    .footer-bottom {
+       
+    }
+    .all-right-reserved {
+        width: 50%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: -50px;
+    }
+    .my-icons {
+        width: 50%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 100px;
+        
+    }
+    .my-icon{
+        margin-right: 15%;
+        margin: 6%;
+    }
+
+   
+}
+@media (max-width: 447px) {
+    .footer-section a {
+        font-size: 3.5vw;
+    }
+    .all-right-reserved {
+        font-size: 4vw;
+        margin-top: -80px;
+    }
+    .my-icons {
+        width: 50%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 80px;
+        
+    }
+    .my-icon{
+        margin-right: 15%;
+        margin: 2%;
+    }
+
 }
