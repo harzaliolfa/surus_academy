@@ -1,0 +1,13 @@
+.btn-primary, .btn-outline-primary {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+.btn-outline-primary {
+    margin-top: 1rem;
+}
+.button-group{
+    display: flex;
+   
+}
