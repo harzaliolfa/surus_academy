@@ -1,4 +1,8 @@
 /* Override Bootstrap primary color */
+
+*{
+  font-family: 'Inter';
+}
 .btn-primary {
     background-color: #22A1D6 !important;
     border-color: #22A1D6 !important;
