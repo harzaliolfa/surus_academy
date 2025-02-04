@@ -1,12 +1,12 @@
 
-<div class="container mt-5">
+<div class="container mt-5 pb-2 mb-5">
     <div class="card shadow-lg border-0 rounded-lg overflow-hidden">
-        <div class="card-header bg-gradient-primary text-white text-center py-4">
+        <div class="card-header text-white text-center py-3 ">
             <h2 class="mb-0">Course Detail</h2>
         </div>
         <div class="card-body p-4">
-            <h4 class="card-title text-primary">{{course.name}}</h4>
-            <p class="card-text text-muted">{{course.description}}</p>
+            <h4 class="card-title text-primary">{{course?.name}}</h4>
+            <p class="card-text text-muted">{{course?.description}}</p>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <strong>Instructor:</strong> <span></span>
@@ -22,8 +22,15 @@
                 </li>
             </ul>
 <div class="button-group">
-    <a class="btn btn-primary">Enroll Now</a>
-    <a (click)="goBack('/Courses')" class="btn btn-outline-primary">
+    <a routerLink="/Courses/Reservation" class="btn btn-primary" (click)="sendCourseId()">
+        Reserve Now 
+        <span class="button-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
+                <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/>
+              </svg>
+        </span>
+      </a>
+    <a (click)="goBack('/Courses')"  class="btn btn-outline-primary">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left me-2" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
         </svg>

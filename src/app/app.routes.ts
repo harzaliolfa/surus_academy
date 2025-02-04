@@ -10,14 +10,15 @@ export const routes: Routes = [
         path:'',
         component:HomeComponent
     },
+    {path: 'Courses/Reservation', component: CourseReservationComponent},
     { 
         path: 'Courses', 
         component: CoursesHomeComponent, 
         children: [
           { path: '', component: CoursesListComponent }, 
-          { path: ':id', component: CourseDetailComponent },
-          {path: 'Reservation', component: CourseReservationComponent}
+          { path: ':id', component: CourseDetailComponent }
         ]
       },
+
 
 ];

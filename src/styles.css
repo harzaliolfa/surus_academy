@@ -10,10 +10,7 @@
     color: #22A1D6 !important;
   }
   
-  .card-header {
-    background-color: #22A1D6 !important;
-  }
-  
+
   .bg-primary {
     background-color: #22A1D6 !important;
   }
@@ -26,4 +23,9 @@
     color: #22A1D6 !important;
     border-color: #22A1D6 !important;
   }
+  .btn-outline-primary:hover{
+    background-color: #22A1D6 !important;
+    color: white !important;
+}
+  
   
