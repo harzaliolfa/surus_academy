@@ -26,4 +26,48 @@
     color: #22A1D6 !important;
     border-color: #22A1D6 !important;
   }
-  
+
+  .start-learning-button{
+    background-color: #33a0d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 190px;
+    font-size: 17px;
+    font-weight: 500;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1)
+
+}
+
+.rings {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  /*width: 500px; you need to define the width and the height where you call it based on your use 
+  height: 500px;*/
+  border: 2px solid  #3498db;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.small-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.small-circle-1 {
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  top: 10%;
+  left: 15%;
+}
+
+.small-circle-2 {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  bottom: 20%;
+  right: 15%;
+}

@@ -8,6 +8,8 @@ a {
     background-color: #101722;
     height: 500px;
     padding: 10px;
+    overflow-x: hidden;
+
 }
 .my-container{
     margin-top: 50px;

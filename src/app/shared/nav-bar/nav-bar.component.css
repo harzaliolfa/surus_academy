@@ -33,19 +33,9 @@
 
 
 .start-learning-button{
-    background-color: #33a0d2;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px;
-    width: 190px;
-    font-size: 17px;
-    font-weight: 500;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
     position: absolute;
     right: 0;
     margin-right: 5%;
-
 }
 
 .my-center-navbar{
