@@ -1,65 +1,82 @@
-@media (max-width: 1200px) {
-    @media (max-width: 480px) {
-        .form-content {
-            flex-direction: column;
-        }
-        .col {
-            display: none;
-        }
-    }
-    .row, .form-content {
-        width: 90vw;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .row {
-        flex-direction: column;
-        height: auto;
-    }
-    .form-content {
-        width: 100vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .row {
-        margin: 5px;
-        padding: 5px;
-    }
-    .form-container {
-        margin-top: 50px;
-    }
-}
-.row{
-    margin: 10px;
-    padding: 10px;
+.form-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 50vw;
-    height: 12vh;
+    width: 100%;
+    margin-top: 100px;
 }
 
-.form-content{
+.form-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:60vw;
+    width: 60vw; /* Your specified width */
+    background: white; /* Added for better visibility */
+    padding: 20px; /* Added padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
-.form-container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-    margin-top: 100px;
 
+.form-header {
+    color: #22A1D6;
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    margin-bottom: 20px; /* Added for spacing */
 }
-.btn{
-    width: 30vw;
+
+.row {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 50vw; /* Your specified width */
+    height: 12vh; /* Your specified height */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.col {
+    flex: 1; /* Ensure columns take equal space */
+    margin: 0 5px; /* Added for spacing between columns */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.btn {
+    width: 30vw; /* Your specified width */
     margin: 0 auto;
     display: block;
+    padding: 10px;
+    background-color: #22A1D6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 680px) {
+    .form-content {
+        width: 90vw; /* Adjusted for smaller screens */
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height for flexibility */
+    }
+
+    .col {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0; /* Remove margin for full width */
+    }
+
+    .btn {
+        width: 100%; /* Full width button on smaller screens */
+    }
 }

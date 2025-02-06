@@ -1,41 +1,41 @@
 <div class="form-container">
-    <div class="form-content shadow-lg p-3 mb-5 bg-white rounded">
-        <div class="form-header">
-            <h2>Reserve now</h2>
-        </div>
-        <form >
-            <div class="row" >
-                <div class="col">
-                    <select class="form-control">
-                        <option>Default select</option>
-                      </select>
-                </div>
-                <div class="col">
-                  <input class="form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                </div>
+  <div class="form-content shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="form-header">
+          <h2>Reserve now</h2>
+      </div>
+      <form>
+          <div class="row">
+              <div class="col">
+                  <select class="form-control">
+                    <option>{{selectedCourese.name}}</option>
+                      @for(course of courses ; track course.id){
+                      <option>{{course.name}}</option>
+                      }
+                  </select>
               </div>
-              <div class="row">
-                <div class="col">
-                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                </div>
-                <div class="col">
-                  <input class="form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                </div>
+              <div class="col">
+                  <input class="form-control" type="text" name="firstname" placeholder="Your name..">
               </div>
-              <div class="row">
-                <div class="col">
-                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                </div>
-                <div class="col">
-                  <input class="form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <input class="form-control" type="text" name="lastname" placeholder="Your last name..">
               </div>
-              <div class="row">
-                <a href="" class="btn btn-primary">Submit</a>
+              <div class="col">
+                  <input class="form-control" type="email" name="email" placeholder="Your email..">
               </div>
-
-        </form>
-
-    </div>
-
+          </div>
+          <div class="row">
+              <div class="col">
+                  <input class="form-control" type="tel" name="phone" placeholder="Your phone..">
+              </div>
+              <div class="col">
+                  <input class="form-control" type="text" name="address" placeholder="Your address..">
+              </div>
+          </div>
+          <div class="row">
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+      </form>
+  </div>
 </div>
