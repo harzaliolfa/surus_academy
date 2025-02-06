@@ -4,11 +4,19 @@ import { CourseDetailComponent } from './features/courses/course-detail/course-d
 import { CoursesListComponent } from './features/courses/courses-home/courses-list/courses-list.component';
 import { HomeComponent } from './features/home/home/home.component';
 import { CourseReservationComponent } from './features/courses/course-reservation/course-reservation.component';
+import { AboutUsComponent } from './features/about-us/about-us.component';
+import { ContactUsComponent } from './features/contact-us/contact-us.component';
 
 export const routes: Routes = [
     {
         path:'',
         component:HomeComponent
+    },
+    {
+      path:'About-Us',component:AboutUsComponent
+    },
+    {
+      path:'Contact-Us',component:ContactUsComponent
     },
     {path: 'Courses/Reservation', component: CourseReservationComponent},
     { 
