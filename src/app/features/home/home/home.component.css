@@ -3,52 +3,72 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 80px 0;
 }
 .hero-text {
-    max-width: 50%;
+    width: 50%;
 }
 
+.hero-image-container {
+  position: relative;
+  max-width: 50%;
+
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;
+}
 .hero-image{
+  width: 85%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
     
 }
-.hero-image-container {
-    position: relative;
-    max-width: 40%;
-    z-index: 2;
-}
-.hero-image-container img {
-    width: 100%;
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-}
 .hero-circles{
-    margin-top: -500px;
     z-index: -1;
-    position: relative;
-    height: 600px;
-    transform: translateX(-87);
-
 }
+
+
 .text-rings{
-    position: absolute;
     left: 12%;
     top: 50%;
-    opacity: 0.5;
-    width: 300px;
-    height: 300px;
+    opacity: 0.35;
+    width: 500px;
+    height: 500px;
 }
 .badge-box {
     position: absolute;
-    z-index: 9999999;
-    padding: 10px;
+    background-color: white;
+    z-index: 3;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
-.certifications {
-    margin-top: 40px;
-    text-align: center;
+
+.certifications{
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+
+.blue-bold-text{
+   color:  #33a0dd;
+}
+.black-bold-text{
+  font-size: 3vw;
+  font-weight: 600;
+  color: black;
+
+}
+p{
+  color:  #808a9c;
+  font-size: 17px;
+}
+.certif-img img{
+  width: 8%;
+  height: 50px;
+  margin: 0 5%;
 }
 
 .plus-3-certifications{
@@ -66,29 +86,7 @@ flex: none;
 order: 0;
 flex-grow: 0;
 }
-.certifications{
-    color: black;
-    font-size: 20px;
-}
 
-.blue-bold-text{
-     
-     color:  #33a0dd;
-}
-.black-bold-text{
-    font-size: 60px;
-    font-weight: 700;
-    color: black;
-
-}
-p{
-    color:  #808a9c;
-    font-size: 17px;
-}
-.certif-img img{
-    width: 10%;
-    height: 10%;
-}
 
 /*****************BLUE CIRCLES ********************/
 
@@ -149,3 +147,51 @@ p{
 
   /*****************BLUE CIRCLES END ********************/
 /*******************************************************/
+
+
+@media (max-width: 989px){
+  .hero-image-container {
+    display: none;
+  }
+
+  .hero-text {
+    width: 80%;
+    
+}
+
+
+  .text-rings{
+    left: 12%;
+    top: 50%;
+    opacity: 0.3;
+    width: 400px;
+    height: 400px;
+}
+.text-rings-2{
+  left: 95%;
+  top: 20%;
+  opacity: 0.35;
+  width: 290px;
+  height: 290px;
+  z-index: -1;
+}
+
+
+}
+
+@media (max-width: 585){
+  .black-bold-text{
+    font-size: 5vw;
+  }
+  .hero-text{
+    margin-left:55% ;
+  }
+
+  .certif-img{
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;
+  }
+
+
+}
