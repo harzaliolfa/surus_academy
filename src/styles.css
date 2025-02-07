@@ -77,3 +77,59 @@
   bottom: 20%;
   right: 15%;
 }
+
+.input-container {
+  position: relative;
+
+}
+
+/* Input field styling */
+.input-container input,
+.input-container select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Label styling */
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 5px;
+  color: #999;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  pointer-events: none; /* Ensure the label doesn't interfere with input clicks */
+}
+
+/* When the input is focused or has content, move the label up */
+.input-container input:focus ~ label,
+.input-container input:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 12px;
+  color: #22a0d6; /* Change color when focused */
+}
+
+/* Change border color when input is focused */
+.input-container input:focus {
+  border-color: #22a0d6;
+}
+.input-container select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000000'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+.input-container select:focus ~ label,
+.input-container select:not([value=""]) ~ label {
+  top: 0;
+  font-size: 12px;
+  color: #22a0d6;
+}

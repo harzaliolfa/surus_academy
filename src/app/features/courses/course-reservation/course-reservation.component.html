@@ -14,32 +14,40 @@
         </div>
         <form>
           <div class="row">
-            <div class="col">
+            <div class="col input-container">
               <select class="form-control">
                 <option>{{selectedCourese.name}}</option>
                 @for(course of courses ; track course.id){
                 <option>{{course.name}}</option>
                 }
               </select>
+              <label for="course">Select Course</label>
+              
             </div>
-            <div class="col">
-              <input class="form-control" type="text" name="firstname" placeholder="Your name..">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <input class="form-control" type="text" name="lastname" placeholder="Your last name..">
-            </div>
-            <div class="col">
-              <input class="form-control" type="email" name="email" placeholder="Your email..">
+            <div class="col input-container">
+              <input class="form-control" type="text" name="firstname" placeholder="">
+              <label for="name">Your Name</label>
+              
             </div>
           </div>
           <div class="row">
-            <div class="col">
-              <input class="form-control" type="tel" name="phone" placeholder="Your phone..">
+            <div class="col  input-container">
+              <input class="form-control" type="text" name="lastname" placeholder="">
+              <label for="name">Your Last Name</label>
             </div>
-            <div class="col">
-              <input class="form-control" type="text" name="address" placeholder="Your address..">
+            <div class="col input-container">
+              <input class="form-control" type="email" name="email" placeholder="">
+                <label for="name">Your Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col input-container">
+              <input class="form-control" type="tel" name="phone" placeholder="">
+                <label for="name">Your Phone</label>
+            </div>
+            <div class="col input-container">
+              <input class="form-control" type="text" name="address" placeholder="">
+                <label for="name">Your Address</label>
             </div>
           </div>
           <div class="row">
