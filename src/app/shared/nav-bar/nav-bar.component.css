@@ -59,9 +59,10 @@
 }
 
 .navbar-transparent {
-    background-color: transparent !important;
+    background: linear-gradient(to bottom, #22a0d64e 0%, #22a0d64e 100%);
     box-shadow: none;
     transition: background-color 0.3s ease;
+
   }
   
 .my-nav-item a{
