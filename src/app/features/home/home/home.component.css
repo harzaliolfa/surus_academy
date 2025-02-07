@@ -72,6 +72,10 @@ p{
   height: 50px;
   margin: 10px 5%;
 }
+.certif-img{
+  margin: 50px auto;
+}
+
 
 .plus-3-certifications{
 width: 178px;
@@ -89,7 +93,46 @@ order: 0;
 flex-grow: 0;
 }
 
+.pagination-button {
+  text-align: center;
+  margin:  30px auto;
+}
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+}
+
+.pagination-dot.active {
+  background-color: #33a0dd; /* Blue color for active dot */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #787676;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #33a0dd;
+  color: white;
+
+}
 /*****************BLUE CIRCLES ********************/
 
 
@@ -198,11 +241,14 @@ flex-grow: 0;
     text-align: center; /* Ensure text is centered */
 }
 .certif-img {
-  width: 300%;
   display: flex;
   flex-direction: column;
   align-items: center; 
   gap: 30px; 
+    margin: 0 0; 
+}
+.certif-img img{
+  width: 90px;
 }
 .certifications p{
   font-size: 3vw;

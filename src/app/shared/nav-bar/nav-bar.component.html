@@ -1,4 +1,4 @@
-<nav class="  my-navbar navbar navbar-expand-lg bg-body-tertiary">
+<nav class="  my-navbar navbar navbar-expand-lg bg-body-tertiary" [ngClass]="{'navbar-transparent': isContactUsRoute}">
     <img src="../../../assets/surus logo.jpg" alt="Surus Academy Logo" class="logo">
 
     <div class=" container-fluid">
@@ -31,7 +31,7 @@
                     </li>
           
                     <li class=" my-nav-item nav-item">
-                        <a class="nav-link " >Contact Us</a>
+                        <a class="nav-link " [routerLink]="['contact-us']" >Contact Us</a>
                     </li>
                     <li class="my-nav-item nav-item">
                         <a class="nav-link " >Resources</a>

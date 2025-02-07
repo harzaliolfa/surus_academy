@@ -51,8 +51,19 @@
     position: absolute;
     right: 0;
     margin-right: 20%;
+    margin-top: 8px;
 
+    background-color: #ffffff; /* Default navbar background color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
+
+.navbar-transparent {
+    background-color: transparent !important;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+  }
+  
 .my-nav-item a{
     margin: 0 8px;
     padding: 5px 8px; 

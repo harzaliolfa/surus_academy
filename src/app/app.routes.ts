@@ -10,7 +10,13 @@ import { ContactUsComponent } from './features/contact-us/contact-us.component';
 export const routes: Routes = [
     {
         path:'',
-        component:HomeComponent
+        component:HomeComponent,
+        children:[
+          { path: '', component: CoursesListComponent }, 
+        ]
+    },
+    {
+      path:'contact-us',component:ContactUsComponent
     },
     {
       path:'About-Us',component:AboutUsComponent
@@ -27,6 +33,7 @@ export const routes: Routes = [
           { path: ':id', component: CourseDetailComponent }
         ]
       },
+      
 
 
 ];

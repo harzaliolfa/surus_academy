@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [RouterModule],
+  imports: [RouterModule,
+          CommonModule,
+
+  ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css'
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit{
+  isContactUsRoute : boolean = false;
+
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if(event instanceof NavigationEnd){
+        this.isContactUsRoute = this.router.url === '/contact-us'
+      }
+    })
+  }
+
+  
+
 
 }

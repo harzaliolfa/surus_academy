@@ -11,7 +11,13 @@ import { Routes } from '@angular/router';
   templateUrl: './courses-home.component.html',
   styleUrls: ['./courses-home.component.css'],
 })
+
 export class CoursesHomeComponent {
+
+  ngOnInit(): void {
+    // Scroll to the top of the page when the component initializes
+    window.scrollTo(0, 0);
+  }
   images = ["assets/Courses-banner1.PNG", "assets/Courses-banner2.jpg", "assets/Courses-banner3.jfif"];
 }
 
