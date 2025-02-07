@@ -19,10 +19,7 @@ export const routes: Routes = [
       path:'contact-us',component:ContactUsComponent
     },
     {
-      path:'About-Us',component:AboutUsComponent
-    },
-    {
-      path:'Contact-Us',component:ContactUsComponent
+      path:'about-us',component:AboutUsComponent
     },
     {path: 'Courses/Reservation', component: CourseReservationComponent},
     { 

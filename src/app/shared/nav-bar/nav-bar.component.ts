@@ -13,12 +13,16 @@ import { CommonModule } from '@angular/common';
 })
 export class NavBarComponent implements OnInit{
   isContactUsRoute : boolean = false;
+  isReserveNowRoute: boolean = false; 
+
 
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationEnd){
-        this.isContactUsRoute = this.router.url === '/contact-us'
+        this.isContactUsRoute = this.router.url === '/contact-us' 
+        this.isReserveNowRoute = this.router.url === '/Courses/Reservation'
+
       }
     })
   }
