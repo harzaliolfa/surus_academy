@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterOutlet } from '@angular/router';
-import { CoursesListComponent } from "./courses-list/courses-list.component";
-import { Routes } from '@angular/router';
 
 
 @Component({
@@ -19,5 +17,15 @@ export class CoursesHomeComponent {
     window.scrollTo(0, 0);
   }
   images = ["assets/Courses-banner1.PNG", "assets/Courses-banner2.jpg", "assets/Courses-banner3.jfif"];
+  @ViewChild('targetSection') targetSection!: ElementRef;
+
+
+  scrollToTarget() {
+    this.targetSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  
+
 }
+
 

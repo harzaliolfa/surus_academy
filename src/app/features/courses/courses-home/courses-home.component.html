@@ -6,33 +6,36 @@
 				<img [src]="images[0]"/>
 			</div>
 			<div class="carousel-caption">
+				<h3>Enhance Your Skills with Our Courses</h3>
+				<p>Discover our amazing courses and enhance your skills!</p>
+						<a class="btn btn-primary" (click)="scrollToTarget()" role="button">Explore Courses</a>										  
 			</div>
 		</ng-template>
 		<ng-template ngbSlide>
 			<div class="picsum-img-wrapper">
 				<img [src]="images[1]"/>
 			</div>
+			<div class="carousel-caption">
+						<h3>Enhance Your Skills with Our Courses</h3>
+						<p>Discover our amazing courses and enhance your skills!</p>
+						<a class="btn btn-primary" (click)="scrollToTarget()" role="button">Explore Courses</a>										  
+			</div>
+			
 		</ng-template>
 		<ng-template ngbSlide>
 			<div class="picsum-img-wrapper">
 				<img [src]="images[2]" />
 			</div>
+			<div class="carousel-caption">
+				<h3>Enhance Your Skills with Our Courses</h3>
+				<p>Discover our amazing courses and enhance your skills!</p>
+						<a class="btn btn-primary" (click)="scrollToTarget()" role="button">Explore Courses</a>										  
+			</div>
 		</ng-template>
 	</ngb-carousel>
 }
 </div>
-
-<div class="courses-description">
-    <p>
-        is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. 
-        It was popularised in the 1960s with the release of Letraset she
-    </p>
-</div>
-<div>
+<div #targetSection>
     <div class="courses-list-header">
         
         <h1 class="courses-list-title">Our Courses</h1>

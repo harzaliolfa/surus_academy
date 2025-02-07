@@ -1,8 +1,27 @@
 
 .carousel, .carousel .picsum-img-wrapper, .carousel img {
+    height: 40vh; /* Reduced height of the carousel */
+    position: relative;
+}
+
+.carousel .picsum-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.63); /* Dark layer with low opacity */
+    z-index: 1;
+}
+
+.carousel img {
     width: 100%;  /* 100% of the viewport width */
     height: 50vh; /* 100% of the viewport height */
+    object-fit: cover;
+    z-index: 0;
 }
+
 .courses-description{
     margin-bottom: 10px;
     color: #696984;
@@ -13,8 +32,19 @@
    font-size: 1.5rem;
 }
 .courses-list-header , .explore-programs{
-    padding: 1rem 1rem 0 1rem ;
+    padding: 0rem 0rem 0 1rem ;
 }
 .courses-list-description{
     color: #696984;
+}
+.carousel-caption{
+    z-index: 2;
+}
+.input-group{
+    width: 40vw;
+}
+.carousel-caption h3{
+    color: #22A1D6;
+    font-size: 2rem;
+
 }
