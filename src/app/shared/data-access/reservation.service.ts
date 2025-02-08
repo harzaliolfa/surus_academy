@@ -9,7 +9,7 @@ export class ReservationService {
   constructor() { }
 
   addReservation(reservation: Reservation): void {
-    // Add reservation to database
+    console.log('Reservation added to database', reservation);
      
   }
 }

@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Course } from '../../../shared/models/course';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { last } from 'rxjs';
+import { ReservationService } from '../../../shared/data-access/reservation.service';
+import { Reservation } from '../../../shared/models/reservation';
 
 @Component({
   selector: 'app-course-reservation',
@@ -16,6 +18,7 @@ export class CourseReservationComponent implements OnInit {
   courseId!: number;
   selectedCourese!: Course;
   courseService = inject(CourseService);
+  resravationService = inject(ReservationService);
   screenWidth: any;
   courses: Course[] = [];
 
@@ -33,7 +36,6 @@ export class CourseReservationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Try to get courseId from localStorage first
     const savedCourseId = localStorage.getItem('selectedCourseId');
     if (savedCourseId) {
       this.courseId = parseInt(savedCourseId, 10);
@@ -41,7 +43,6 @@ export class CourseReservationComponent implements OnInit {
       this.reservationForm.patchValue({ course: this.selectedCourese.name });
     }
 
-    // Subscribe to selectedCourseId$ and update storage
     this.courseService.selectedCourseId$.subscribe((id) => {
       if (id) {
         this.courseId = id;
@@ -51,7 +52,6 @@ export class CourseReservationComponent implements OnInit {
       }
     });
 
-    // Load all courses
     this.courses = this.courseService.getAllCourses();
   }
 
@@ -66,8 +66,9 @@ export class CourseReservationComponent implements OnInit {
 
   handleSubmit() {
     if (this.reservationForm.valid) {
-      console.log(this.reservationForm.value);
-      // You can now send the form data to your backend or handle it as needed
+      const reseravation : Reservation = this.reservationForm.value;
+      this.resravationService.addReservation(reseravation);
+      
     } else {
       console.error('Form is invalid');
     }
