@@ -12,10 +12,10 @@
         <div class="form-header">
           <h2>Reserve now</h2>
         </div>
-        <form>
+        <form [formGroup]="reservationForm" (ngSubmit)="handleSubmit()">
           <div class="row">
             <div class="col input-container">
-              <select class="form-control">
+              <select class="form-control" formControlName="course">
                 <option>{{selectedCourese.name}}</option>
                 @for(course of courses ; track course.id){
                 <option>{{course.name}}</option>
@@ -25,28 +25,29 @@
               
             </div>
             <div class="col input-container">
-              <input class="form-control" type="text" name="firstname" placeholder="">
+              <input class="form-control" type="text" name="firstname" placeholder="" formControlName="name">
               <label for="name">Your Name</label>
               
             </div>
           </div>
           <div class="row">
             <div class="col  input-container">
-              <input class="form-control" type="text" name="lastname" placeholder="">
+              <input class="form-control" type="text" name="lastname" placeholder="" formControlName="lastName">
+                <label for="name">Your Last Name</label>
               <label for="name">Your Last Name</label>
             </div>
             <div class="col input-container">
-              <input class="form-control" type="email" name="email" placeholder="">
+              <input class="form-control" type="email" name="email" placeholder="" formControlName="email">
                 <label for="name">Your Email</label>
             </div>
           </div>
           <div class="row">
             <div class="col input-container">
-              <input class="form-control" type="tel" name="phone" placeholder="">
+              <input class="form-control" type="tel" name="phone" placeholder="" formControlName="phone">
                 <label for="name">Your Phone</label>
             </div>
             <div class="col input-container">
-              <input class="form-control" type="text" name="address" placeholder="">
+              <input class="form-control" type="text" name="address" placeholder="" formControlName="address">
                 <label for="name">Your Address</label>
             </div>
           </div>
