@@ -15,19 +15,20 @@ export class ContactUsComponent {
     message: string = '';
 
     onSubmit(){
-      if(! this.name || !this.email || this.message){
+      if(!this.name || !this.email || !this.message){
         alert('All fields are required');
         return;
       }
       const serviceID  = 'service_5baf7zc';
       const templateID= 'template_gnwol7k';
+      const userID = 'k1-UK38jcQkMM_lou';
       const templateParams = {
         name : this.name,
         email: this.email,
         message: this.message
       };
 
-      emailjs.send(serviceID, templateID, templateParams)
+      emailjs.send(serviceID, templateID, templateParams, userID)
       .then(() => {
         alert('Message sent successfully!');
         this.name = '';
