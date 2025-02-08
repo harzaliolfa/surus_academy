@@ -6,13 +6,14 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { last } from 'rxjs';
 import { ReservationService } from '../../../shared/data-access/reservation.service';
 import { Reservation } from '../../../shared/models/reservation';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-course-reservation',
   templateUrl: './course-reservation.component.html',
   styleUrls: ['./course-reservation.component.css'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule]
+  imports: [CommonModule, ReactiveFormsModule,RouterModule]
 })
 export class CourseReservationComponent implements OnInit {
   courseId!: number;
@@ -23,6 +24,7 @@ export class CourseReservationComponent implements OnInit {
   courses: Course[] = [];
 
   reservationForm: FormGroup;
+isSubmitted: boolean = false;
 
   constructor(private fb: FormBuilder) {
     this.reservationForm = this.fb.group({
@@ -49,6 +51,7 @@ export class CourseReservationComponent implements OnInit {
     if (this.reservationForm.valid) {
       const reseravation : Reservation = this.reservationForm.value;
       this.resravationService.addReservation(reseravation);
+      this.isSubmitted = true;
       
     } else {
       console.error('Form is invalid');

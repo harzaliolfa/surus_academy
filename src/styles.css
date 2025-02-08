@@ -18,7 +18,9 @@
   .bg-primary {
     background-color: #22A1D6 !important;
   }
-  
+  .btn-outline-primary{
+    border-color: #22A1D6 !important;
+}
   .text-primary {
     color: #22A1D6 !important;
   }

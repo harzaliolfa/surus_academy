@@ -59,7 +59,7 @@
     box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-.btn {
+.button {
     width: 30vw; /* Your specified width */
     margin: 0 auto;
     display: block;
@@ -132,6 +132,22 @@ z-index: 1;
   .text-danger::before {
     content: '⚠️'; /* Warning icon */
   }
+
+  .button-container{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    width: 48%;
+    margin: 5px;
+    text-align: start;
+    padding-left: 2%;
+    padding-right: 1%;
+    
+}
+.button-icon{
+    float: right;
+}
 
 @media (max-width: 680px) {
     .form-content {
