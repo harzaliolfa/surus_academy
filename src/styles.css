@@ -85,7 +85,9 @@
 
 /* Input field styling */
 .input-container input,
-.input-container select {
+.input-container select,
+.input-container textarea
+ {
   width: 100%;
   padding: 10px;
   border: 2px solid #ccc;
@@ -119,6 +121,18 @@
 
 /* Change border color when input is focused */
 .input-container input:focus {
+  border-color: #22a0d6;
+}
+
+.input-container textarea:focus ~ label,
+.input-container textarea:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 12px;
+  color: #22a0d6; /* Change color when focused */
+}
+
+/* Change border color when input is focused */
+.input-container textarea:focus {
   border-color: #22a0d6;
 }
 .input-container select {
