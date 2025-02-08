@@ -1,60 +1,78 @@
 <div class="wrapper">
-    <div class="dots top-right"></div>
-    <div class="dots bottom-left"></div>
-    <div class="shape square bold" style="bottom: -70px; left: 50px;"></div>
-    <div class="shape rectangle bold" style="bottom: 10px; left: -90px;"></div>
-    <div class="shape square bold" style="bottom: -50px; left: 80px;"></div>
-    <div class="shape square bold" style="bottom: -70px; right: 50px;"></div>
-    <div class="shape rectangle bold" style="bottom: 10px; right: -90px;"></div>
-    <div class="shape square bold" style="bottom: -50px; right: 80px;"></div>
-    <div class="form-container">
-      <div class="form-content shadow-lg p-3 mb-5 bg-white rounded">
-        <div class="form-header">
-          <h2>Reserve now</h2>
-        </div>
-        <form [formGroup]="reservationForm" (ngSubmit)="handleSubmit()">
-          <div class="row">
-            <div class="col input-container">
-              <select class="form-control" formControlName="course">
-                <option>{{selectedCourese.name}}</option>
+  <div class="dots top-right"></div>
+  <div class="dots bottom-left"></div>
+  <div class="shape square bold" style="bottom: -70px; left: 50px;"></div>
+  <div class="shape rectangle bold" style="bottom: 10px; left: -90px;"></div>
+  <div class="shape square bold" style="bottom: -50px; left: 80px;"></div>
+  <div class="shape square bold" style="bottom: -70px; right: 50px;"></div>
+  <div class="shape rectangle bold" style="bottom: 10px; right: -90px;"></div>
+  <div class="shape square bold" style="bottom: -50px; right: 80px;"></div>
+  <div class="form-container">
+    <div class="form-content shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="form-header">
+      <h2>Reserve now</h2>
+    </div>
+    <form [formGroup]="reservationForm" (ngSubmit)="handleSubmit()">
+      <div class="row">
+      <div class="col input-container">
+        <select class="form-control" formControlName="course">
+        <option>{{selectedCourese.name}}</option>
                 @for(course of courses ; track course.id){
                 <option>{{course.name}}</option>
                 }
-              </select>
-              <label for="course">Select Course</label>
-              
-            </div>
-            <div class="col input-container">
-              <input class="form-control" type="text" name="firstname" placeholder="" formControlName="name">
-              <label for="name">Your Name</label>
-              
-            </div>
-          </div>
-          <div class="row">
-            <div class="col  input-container">
-              <input class="form-control" type="text" name="lastname" placeholder="" formControlName="lastName">
-                <label for="name">Your Last Name</label>
-              <label for="name">Your Last Name</label>
-            </div>
-            <div class="col input-container">
-              <input class="form-control" type="email" name="email" placeholder="" formControlName="email">
-                <label for="name">Your Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col input-container">
-              <input class="form-control" type="tel" name="phone" placeholder="" formControlName="phone">
-                <label for="name">Your Phone</label>
-            </div>
-            <div class="col input-container">
-              <input class="form-control" type="text" name="address" placeholder="" formControlName="address">
-                <label for="name">Your Address</label>
-            </div>
-          </div>
-          <div class="row">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
+        </select>
+        <label for="course">Select Course</label>
+        <div *ngIf="reservationForm.get('course')?.touched && reservationForm.get('course')?.invalid" class="text-danger">
+        Please select a course.
+        </div>
       </div>
+      <div class="col input-container">
+        <input class="form-control" type="text" name="firstname" placeholder="" formControlName="name">
+        <label for="name">Your Name</label>
+        <div *ngIf="reservationForm.get('name')?.touched && reservationForm.get('name')?.invalid" class="text-danger">
+        Name is required.
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col input-container">
+        <input class="form-control" type="text" name="lastname" placeholder="" formControlName="lastName">
+        <label for="lastname">Your Last Name</label>
+        <div *ngIf="reservationForm.get('lastName')?.touched && reservationForm.get('lastName')?.invalid" class="text-danger">
+        Last name is required.
+        </div>
+      </div>
+      <div class="col input-container">
+        <input class="form-control" type="email" name="email" placeholder="" formControlName="email">
+        <label for="email">Your Email</label>
+        <div *ngIf="reservationForm.get('email')?.touched && reservationForm.get('email')?.invalid" class="text-danger">
+        Valid email is required.
+        </div>
+        <div *ngIf="reservationForm.get('email')?.errors?.['email']" class="text-danger">
+            Email format is not valid.
+          </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col input-container">
+        <input class="form-control" type="tel" name="phone" placeholder="" formControlName="phone">
+        <label for="phone">Your Phone</label>
+        <div *ngIf="reservationForm.get('phone')?.touched && reservationForm.get('phone')?.invalid" class="text-danger">
+        Phone number is required.
+        </div>
+      </div>
+      <div class="col input-container">
+        <input class="form-control" type="text" name="address" placeholder="" formControlName="address">
+        <label for="address">Your Address</label>
+        <div *ngIf="reservationForm.get('address')?.touched && reservationForm.get('address')?.invalid" class="text-danger">
+        Address is required.
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <button [disabled]="this.reservationForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
     </div>
+  </div>
   </div>

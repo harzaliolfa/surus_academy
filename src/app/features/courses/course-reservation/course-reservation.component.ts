@@ -26,8 +26,8 @@ export class CourseReservationComponent implements OnInit {
       course: [this.courseId, Validators.required],
       name: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
-      phone: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern('^[0-9+]*$'),Validators.minLength(6)]], // Added + to the accepted pattern
       address: ['', Validators.required],
     });
   }
