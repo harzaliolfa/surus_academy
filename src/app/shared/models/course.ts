@@ -1,3 +1,5 @@
+import { Instructor } from "./instructor";
+
 export class Course {
 
 
@@ -8,5 +10,10 @@ export class Course {
         public price?: number, 
         public isTopRated?: boolean, 
         public date?: string, 
-        public imgURL?: string) {}
+        public imgURL?: string,
+        public instructor?: Instructor,
+        public duration?: string,
+
+
+) {}
 }
