@@ -35,7 +35,27 @@ export class CourseReservationComponent implements OnInit {
     });
   }
 
+  
+  
   ngOnInit(): void {
+    this.getSelectedCourseName();
+  }
+
+
+
+
+
+  handleSubmit() {
+    if (this.reservationForm.valid) {
+      const reseravation : Reservation = this.reservationForm.value;
+      this.resravationService.addReservation(reseravation);
+      
+    } else {
+      console.error('Form is invalid');
+    }
+  }
+
+  private getSelectedCourseName():void{
     const savedCourseId = localStorage.getItem('selectedCourseId');
     if (savedCourseId) {
       this.courseId = parseInt(savedCourseId, 10);
@@ -53,24 +73,14 @@ export class CourseReservationComponent implements OnInit {
     });
 
     this.courses = this.courseService.getAllCourses();
+
   }
 
-  // Method to load course data
-  loadCourseData(courseId: number): void {
+  private  loadCourseData(courseId: number): void {
     this.courseService.getCourseById(courseId).subscribe((course: Course | null) => {
       if (course) {
         this.selectedCourese = course;
       }
     });
-  }
-
-  handleSubmit() {
-    if (this.reservationForm.valid) {
-      const reseravation : Reservation = this.reservationForm.value;
-      this.resravationService.addReservation(reseravation);
-      
-    } else {
-      console.error('Form is invalid');
-    }
   }
 }
