@@ -21,10 +21,12 @@
       <!-- Left Side: Form -->
       <div class="message-section col-md-6">
         <p><strong>Leave us a message</strong></p>
-          <form>
+          <form (ngSubmit)= "onSubmit()">
           <div class="form-group mb-3">
             <input
               type="text"
+              [(ngModel)]="name"
+
               class="form-control"
               id="name"
               placeholder="First_Name Last_Name"
@@ -33,6 +35,8 @@
           <div class="form-group mb-3">
             <input
               type="email"
+              [(ngModel)]="email"
+
               class="form-control"
               id="email"
               placeholder="Email Address"
@@ -41,6 +45,7 @@
           <div class="form-group mb-3">
             <textarea
               class="form-control"
+              [(ngModel)]="message"
               id="message"
               rows="4"
               placeholder="Your Message"
