@@ -6,7 +6,6 @@
 
   }
 .form-container {
-    background: linear-gradient(to bottom, #22a0d64e 1%, #ffffff 30%);    
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -60,7 +59,7 @@
     box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-.btn {
+.button {
     width: 30vw; /* Your specified width */
     margin: 0 auto;
     display: block;
@@ -121,8 +120,34 @@ z-index: 1;
   .shape.bold{
     border: 4px solid #22A1D6;
   }
+  .text-danger {
+    color: #ff4d4f; /* Updated modern red color for error */
+    font-size: 0.875rem; /* Using rem for better scalability */
+    margin-top: 0.5rem; /* Space above the error message */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Modern spacing between icon and text */
+  }
 
+  .text-danger::before {
+    content: '⚠️'; /* Warning icon */
+  }
 
+  .button-container{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    width: 48%;
+    margin: 5px;
+    text-align: start;
+    padding-left: 2%;
+    padding-right: 1%;
+    
+}
+.button-icon{
+    float: right;
+}
 
 @media (max-width: 680px) {
     .form-content {

@@ -22,35 +22,38 @@
       <div class="message-section col-md-6">
         <p><strong>Leave us a message</strong></p>
           <form (ngSubmit)= "onSubmit()">
-          <div class="form-group mb-3">
+          <div class="form-group mb-3 input-container">
             <input
               type="text"
               [(ngModel)]="name"
               name="name"
               class="form-control"
               id="name"
-              placeholder="First_Name Last_Name"
+              placeholder=""
             />
+            <label for="name" >Full Name</label>
           </div>
-          <div class="form-group mb-3">
+          <div class="form-group mb-3 input-container">
             <input
               type="email"
               [(ngModel)]="email"
               name="email"
               class="form-control"
               id="email"
-              placeholder="Email Address"
+              placeholder=""
             />
+            <label for="email">Email</label>
           </div>
-          <div class="form-group mb-3">
+          <div class="form-group mb-3 input-container">
             <textarea
               class="form-control"
               [(ngModel)]="message"
               name="message"
               id="message"
               rows="4"
-              placeholder="Your Message"
+              placeholder=""
             ></textarea>
+            <label for="message">Message</label>
           </div>
           <button type="submit" class=" btn btn-primary w-100">
             Send
