@@ -8,7 +8,7 @@
   <div class="shape square bold" style="bottom: -70px; right: 50px;"></div>
   <div class="shape rectangle bold" style="bottom: 10px; right: -90px;"></div>
   <div class="shape square bold" style="bottom: -50px; right: 80px;"></div>
-<div class="container py-5">
+<div class="container py-5 shadow-lg p-3 mb-5 bg-white rounded">
     <div class="row">
       <div class="col-12 text-center mb-4">
         <div class="form-header">
@@ -21,12 +21,10 @@
       <!-- Left Side: Form -->
       <div class="message-section col-md-6">
         <p><strong>Leave us a message</strong></p>
-          <form (ngSubmit)= "onSubmit()">
+          <form>
           <div class="form-group mb-3 input-container">
             <input
               type="text"
-              [(ngModel)]="name"
-              name="name"
               class="form-control"
               id="name"
               placeholder=""
@@ -36,8 +34,6 @@
           <div class="form-group mb-3 input-container">
             <input
               type="email"
-              [(ngModel)]="email"
-              name="email"
               class="form-control"
               id="email"
               placeholder=""
@@ -47,8 +43,6 @@
           <div class="form-group mb-3 input-container">
             <textarea
               class="form-control"
-              [(ngModel)]="message"
-              name="message"
               id="message"
               rows="4"
               placeholder=""
