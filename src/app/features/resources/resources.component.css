@@ -1,0 +1,54 @@
+.coming-soon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: linear-gradient(135deg, #22A1D6, #2575fc); /* Modern gradient */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .coming-soon-content {
+    max-width: 600px;
+
+  }
+  
+  .coming-soon-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .coming-soon-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    width: 50%; /* Adjust based on progress */
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+    animation: progressAnimation 2s infinite ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes progressAnimation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
