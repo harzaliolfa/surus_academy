@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import emailjs from '@emailjs/browser';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ContactMessage } from '../../shared/models/contact';
+import { ContactService } from '../../shared/data-access/contact.service';
 
 
 @Component({
   selector: 'app-contact-us',
-  imports: [FormsModule ],
+  imports: [FormsModule, ReactiveFormsModule ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })
@@ -13,37 +15,31 @@ export class ContactUsComponent {
     name: string = '';
     email: string = '';
     message: string = '';
+    contactForm: FormGroup;
+    isSubmitted: boolean = false;
+    contactService = inject(ContactService)
+  
+    constructor(private fb: FormBuilder, private router: Router ){
+      this.contactForm = this.fb.group({
+        name : ['', Validators.required],
+        email:  ['', Validators.required],
+        message:  ['', Validators.required],
+      })
+    }
     ngOnInit(): void {
       // Scroll to the top of the page when the component initializes
       window.scrollTo(0, 0);
     }
 
     onSubmit(){
-      if(!this.name || !this.email || !this.message){
-        alert('All fields are required');
-        return;
+      if(this.contactForm.valid){
+        const contactMessage : ContactMessage = this.contactForm.value;
+         this.isSubmitted = true; 
+         this.contactService.addContactMessage(contactMessage);
+         console.error('Message sent successfully!!');
       }
-      const serviceID  = 'service_5baf7zc';
-      const templateID= 'template_gnwol7k';
-      const userID = 'k1-UK38jcQkMM_lou';
-      const templateParams = {
-        name : this.name,
-        email: this.email,
-        message: this.message
-      };
-
-      emailjs.send(serviceID, templateID, templateParams, userID)
-      .then(() => {
-        alert('Message sent successfully!');
-        this.name = '';
-        this.email = '';
-        this.message = '';
-      })
-      .catch((error)=> {
-        console.error('error sending message: ', error);
-        alert('Failed to send message.');
-
-      })
+      else{
+        console.error('Form is invalid')
+      }
     }
-
 }
