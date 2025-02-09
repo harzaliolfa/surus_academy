@@ -14,7 +14,9 @@ import { CommonModule } from '@angular/common';
 export class NavBarComponent implements OnInit{
   isContactUsRoute : boolean = false;
   isReserveNowRoute: boolean = false; 
-
+  isAboutUsRoute: boolean= false;
+  isHomeRoute: boolean = false;
+  isResourcesRoute: boolean = false;
 
   constructor(private router: Router) {}
   ngOnInit(): void {
@@ -22,6 +24,11 @@ export class NavBarComponent implements OnInit{
       if(event instanceof NavigationEnd){
         this.isContactUsRoute = this.router.url === '/contact-us' 
         this.isReserveNowRoute = this.router.url === '/Courses/Reservation'
+        this.isAboutUsRoute = this.router.url === '/about-us'
+        this.isHomeRoute = this.router.url === '/'
+        this.isResourcesRoute = this.router.url === '/resources'
+
+
 
       }
     })

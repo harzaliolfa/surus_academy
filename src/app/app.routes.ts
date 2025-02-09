@@ -6,6 +6,7 @@ import { HomeComponent } from './features/home/home/home.component';
 import { CourseReservationComponent } from './features/courses/course-reservation/course-reservation.component';
 import { AboutUsComponent } from './features/about-us/about-us.component';
 import { ContactUsComponent } from './features/contact-us/contact-us.component';
+import { ResourcesComponent } from './features/resources/resources.component';
 
 export const routes: Routes = [
    
@@ -31,6 +32,9 @@ export const routes: Routes = [
           { path: '', component: CoursesListComponent }, 
           { path: ':id', component: CourseDetailComponent }
         ]
+      },
+      {
+        path:'resources',component:ResourcesComponent
       },
       
 

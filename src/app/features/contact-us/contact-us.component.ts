@@ -13,6 +13,10 @@ export class ContactUsComponent {
     name: string = '';
     email: string = '';
     message: string = '';
+    ngOnInit(): void {
+      // Scroll to the top of the page when the component initializes
+      window.scrollTo(0, 0);
+    }
 
     onSubmit(){
       if(!this.name || !this.email || !this.message){

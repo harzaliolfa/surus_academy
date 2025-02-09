@@ -44,8 +44,9 @@
     width: 190px;
     font-size: 1rem;
     font-weight: 500;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1)
-
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 9999;
 }
 
 .rings {

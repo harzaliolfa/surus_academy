@@ -1,7 +1,7 @@
 <nav class="my-navbar navbar navbar-expand-lg bg-body-tertiary" [ngClass]="{'navbar-transparent': isContactUsRoute || isReserveNowRoute}">
     <img src="../../../assets/surus logo.jpg" alt="Surus Academy Logo" class="logo">
 
-    <div class=" container-fluid">
+    <div class="container-fluid">
       <button class=" my-toggler-btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,26 +19,25 @@
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" >Something else here</a></li>
                     </ul>
-                  </li>
+                </li>
               </form>
               <div class="my-center-navbar">
                 <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class=" my-nav-item navccccv-item">
-                      <a class="nav-link active" [routerLink]="['']" aria-current="page" >Home</a>
+                    <li class=" my-nav-item nav-item">
+                      <a class="nav-link" [ngClass]="{'active': isHomeRoute}" [routerLink]="['/']" aria-current="page" >Home</a>
                     </li>
                     <li class=" my-nav-item nav-item">
-                        <a class="nav-link" >About Us</a>
-                    </li>
-          
-                    <li class=" my-nav-item nav-item">
-                        <a class="nav-link " [routerLink]="['contact-us']" >Contact Us</a>
+                        <a class="nav-link" [ngClass]="{'active': isAboutUsRoute}" [routerLink]="['about-us']" >About Us</a>
                     </li>
                     <li class="my-nav-item nav-item">
-                        <a class="nav-link " >Resources</a>
+                        <a class="nav-link "[ngClass]="{'active': isContactUsRoute}" [routerLink]="['contact-us']">Contact Us</a>
+                    </li>
+                    <li class="my-nav-item nav-item">
+                        <a class="nav-link " [ngClass]="{'active': isResourcesRoute}" [routerLink]="['resources']"  >Resources</a>
                     </li>
                   </ul>
               </div>
-              <button [routerLink]="['/Courses']" class=" start-learning-button btn btn-outline-success my-2 my-sm-0" type="submit">
+              <button [routerLink]="['/Courses']" class=" start-learning-button btn  my-2 my-sm-0" type="submit">
                 <span class="full-text">Start Learning Today</span>
                 <span class="short-text">Start Learning</span></button>
         </div>
