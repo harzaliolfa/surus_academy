@@ -8,6 +8,12 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
+.start-learning-button:active {
+    outline: 2px solid #5bbae3;
+    color: #5bbae3;
+
+}
+
 .my-serach-bar{
     display: flex;
     width: 28%;
