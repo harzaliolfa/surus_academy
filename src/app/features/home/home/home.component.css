@@ -1,91 +1,89 @@
-
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 0;
 }
 .hero-text {
-    width: 50%;
+  width: 50%;
 }
 
 
 .blue-bold-text{
-  color:  #33a0dd;
+color:  #33a0dd;
 }
 .black-bold-text{
- font-size: 3vw;
- font-weight: 600;
- color: black;
+font-size: 3vw;
+font-weight: 600;
+color: black;
 }
 
 p{
- color:  #808a9c;
- font-size: 17px;
+color:  #808a9c;
+font-size: 17px;
 }
 
 .hero-image-container {
-  position: relative;
-  max-width: 50%;
+position: relative;
+max-width: 50%;
 
-  display: flex;
-  justify-content: center;  /* Centers horizontally */
-  align-items: center;
+display: flex;
+justify-content: center;  /* Centers horizontally */
+align-items: center;
 }
 .hero-image{
-  width: 86%;
-  border-radius: 0 0 193px 190px; ;
-  position: relative;
-  z-index: 2;
-  margin-top: 10px;
-    
+width: 86%;
+border-radius: 0 0 193px 190px; ;
+position: relative;
+z-index: 2;
+margin-top: 10px;
+
 }
 .hero-circles{
-    z-index: -1;
+  z-index: -1;
 }
 
 
 .text-rings{
-    left: 12%;
-    top: 50%;
-    opacity: 0.35;
-    width: 500px;
-    height: 500px;
+  left: 12%;
+  top: 50%;
+  opacity: 0.35;
+  width: 500px;
+  height: 500px;
 }
 .badge-box {
-    position: absolute;
-    background-color: white;
-    z-index: 3;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  background-color: white;
+  z-index: 3;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
 
 .certifications{
-  color: black;
-  font-size: 20px;
-  text-align: center;
+color: black;
+font-size: 20px;
+text-align: center;
 }
 
 .certif-img img{
-  width: 8%;
-  height: 50px;
-  margin: 10px 5%;
+width: 8%;
+height: 50px;
+margin: 10px 5%;
 }
 .certif-img .pmp{
-  width:100px;
-  height: 100px;
-  margin-top: -20px;
-
+width:100px;
+height: 100px;
+margin-top: -20px;
 }
 .certif-img{
-  margin: 50px auto;
+margin: 50px auto;
 }
 
 .start-learning-button {
-  z-index: 1;
-  position: relative; 
+z-index: 1;
+position: relative; 
 }
 .plus-3-certifications{
 width: 178px;
@@ -104,155 +102,155 @@ flex-grow: 0;
 }
 
 .pagination-button {
-  text-align: center;
+text-align: center;
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  gap: 8px;
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+gap: 8px;
 }
 .pagination-button button{
-  border-radius: 10px;
-  border-color: #666;
-  
+border-radius: 10px;
+border-color: #666;
+
 }
 
 .pagination-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #d3d3d3;
-  border-radius: 50%;
+width: 10px;
+height: 10px;
+background-color: #d3d3d3;
+border-radius: 50%;
 }
 
 .pagination-dot.active {
-  background-color: #33a0dd; /* Blue color for active dot */
+background-color: #33a0dd; /* Blue color for active dot */
 }
 .button:hover {
-  background-color: #33a0dd;
-  color: white;
+background-color: #33a0dd;
+color: white;
 
 }
 /*****************BLUE CIRCLES ********************/
 
 
-  .big-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 450px;
-    height: 450px;
-    background-color: #3498db;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
+.big-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  height: 450px;
+  background-color: #3498db;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 
-  .small-circle-1-hero-text {
-    width: 50px;
-    height: 50px;
-    top: 10%;
-    left: 15%;
-  }
+.small-circle-1-hero-text {
+  width: 50px;
+  height: 50px;
+  top: 10%;
+  left: 15%;
+}
 
-  .small-circle-2-hero-text {
-    width: 20px;
-    height: 20px;
-    bottom: 20%;
-    right: 15%;
-  }
+.small-circle-2-hero-text {
+  width: 20px;
+  height: 20px;
+  bottom: 20%;
+  right: 15%;
+}
 
-  .img-rings {
-    width: 500px;
-    height: 500px;
-  }
+.img-rings {
+  width: 500px;
+  height: 500px;
+}
 
-  .rings::before,
-  .rings::after {
-    content: '';
-    position: absolute;
-    border: 2px solid  #3498db;
-    border-radius: 50%;
-  }
+.rings::before,
+.rings::after {
+  content: '';
+  position: absolute;
+  border: 2px solid  #3498db;
+  border-radius: 50%;
+}
 
-  .rings::before {
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    left: 10%;
-  }
+.rings::before {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
 
-  .rings::after {
-    width: 60%;
-    height: 60%;
-    top: 20%;
-    left: 20%;
-  }
+.rings::after {
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
+}
 
-  /*****************BLUE CIRCLES END ********************/
+/*****************BLUE CIRCLES END ********************/
 /*******************************************************/
 
 
 @media (max-width: 989px){
-  .hero-image-container {
-    display: none;
-  }
+.hero-image-container {
+  display: none;
+}
 
-  .black-bold-text{
-    font-size: 5vw;
-  }
-  .hero-text {
-    width: 80%;
-  }
-  .text-rings{
-    left: 12%;
-    top: 50%;
-    opacity: 0.3;
-    width: 400px;
-    height: 400px;
-  }
+.black-bold-text{
+  font-size: 5vw;
+}
+.hero-text {
+  width: 80%;
+}
+.text-rings{
+  left: 12%;
+  top: 50%;
+  opacity: 0.3;
+  width: 400px;
+  height: 400px;
+}
 .text-rings-2{
-  left: 95%;
-  top: 20%;
-  opacity: 0.35;
-  width: 290px;
-  height: 290px;
-  z-index: -1;
-  }
+left: 95%;
+top: 20%;
+opacity: 0.35;
+width: 290px;
+height: 290px;
+z-index: -1;
+}
 }
 
 @media (max-width: 578px){
-  .black-bold-text{
-    font-size: 5.5vw;
-  }
+.black-bold-text{
+  font-size: 5.5vw;
+}
 
-  .hero-text{
-    margin-left: 10%;
-  }
-  .regular-text-desc{
-    font-size: 3.5vw;
-  }
-  .certifications {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center elements horizontally */
-    gap: 15px; /* Add spacing between elements */
-    text-align: center; /* Ensure text is centered */
+.hero-text{
+  margin-left: 10%;
+}
+.regular-text-desc{
+  font-size: 3.5vw;
+}
+.certifications {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center elements horizontally */
+  gap: 15px; /* Add spacing between elements */
+  text-align: center; /* Ensure text is centered */
 }
 .certif-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  gap: 30px; 
-    margin: 0 0; 
+display: flex;
+flex-direction: column;
+align-items: center; 
+gap: 30px; 
+  margin: 0 0; 
 }
 .certif-img img{
-  width: 90px;
+width: 90px;
 }
 .certifications p{
-  font-size: 3vw;
+font-size: 3vw;
 }
 
 
@@ -260,82 +258,82 @@ flex-grow: 0;
 
 /******************************** TUTORS SECTION ******************************************/
 .tutors-section {
-  text-align: center;
-  padding: 50px 20px;
+text-align: center;
+padding: 50px 20px;
 }
 
 .tutors-label {
-  color: #33a0dd;
-  font-weight: 600;
-  font-size: 14px;
+color: #33a0dd;
+font-weight: 600;
+font-size: 14px;
 }
 
 .section-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 10px 0;
+font-size: 28px;
+font-weight: bold;
+margin: 10px 0;
 }
 
 .section-description {
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto 40px;
+color: #666;
+max-width: 600px;
+margin: 0 auto 40px;
 }
 
 .tutors-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
 }
 
 .tutor-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 220px;
+background: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+width: 220px;
 }
 
 .tutor-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
+width: 80px;
+height: 80px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 10px;
 }
 
 .tutor-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 5px 0;
+font-size: 18px;
+font-weight: bold;
+margin: 5px 0;
 }
 
 .tutor-role {
-  color: #33a0dd;
-  font-size: 14px;
-  font-weight: 600;
+color: #33a0dd;
+font-size: 14px;
+font-weight: 600;
 }
 
 .tutor-bio {
-  font-size: 12px;
-  color: #666;
-  margin: 10px 0;
+font-size: 12px;
+color: #666;
+margin: 10px 0;
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+display: flex;
+justify-content: center;
+gap: 10px;
 }
 
 .social-icon {
-  font-size: 16px;
-  color: #666;
-  transition: color 0.3s;
+font-size: 16px;
+color: #666;
+transition: color 0.3s;
 }
 
 .social-icon:hover {
-  color: #33a0dd;
+color: #33a0dd;
 }
