@@ -3,6 +3,7 @@
     overflow: hidden; /* Prevent content from overflowing */
     width: 100%;
     background: linear-gradient(to bottom, #22a0d64e 1%, #ffffff 30%);    
+    margin-top: 70px;
 
   }
 .form-container {
