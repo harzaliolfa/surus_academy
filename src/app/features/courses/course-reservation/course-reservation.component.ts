@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { last } from 'rxjs';
 import { ReservationService } from '../../../shared/data-access/reservation.service';
 import { Reservation } from '../../../shared/models/reservation';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-course-reservation',
@@ -24,9 +24,9 @@ export class CourseReservationComponent implements OnInit {
   courses: Course[] = [];
 
   reservationForm: FormGroup;
-isSubmitted: boolean = false;
+  isSubmitted: boolean = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.reservationForm = this.fb.group({
       course: [this.courseId, Validators.required],
       name: ['', Validators.required],
@@ -42,10 +42,6 @@ isSubmitted: boolean = false;
   ngOnInit(): void {
     this.getSelectedCourseName();
   }
-
-
-
-
 
   handleSubmit() {
     if (this.reservationForm.valid) {

@@ -8,13 +8,8 @@ import { AboutUsComponent } from './features/about-us/about-us.component';
 import { ContactUsComponent } from './features/contact-us/contact-us.component';
 
 export const routes: Routes = [
-    {
-        path:'',
-        component:HomeComponent,
-        children:[
-          { path: '', component: CoursesListComponent }, 
-        ]
-    },
+   
+    
     {
       path:'contact-us',component:ContactUsComponent
     },
@@ -22,6 +17,13 @@ export const routes: Routes = [
       path:'about-us',component:AboutUsComponent
     },
     {path: 'Courses/Reservation', component: CourseReservationComponent},
+    {
+      path:'',
+      component:HomeComponent,
+      children:[
+        { path: '', component: CoursesListComponent }, 
+      ]
+  },
     { 
         path: 'Courses', 
         component: CoursesHomeComponent, 
