@@ -7,36 +7,29 @@ import { CourseReservationComponent } from './features/courses/course-reservatio
 import { AboutUsComponent } from './features/about-us/about-us.component';
 import { ContactUsComponent } from './features/contact-us/contact-us.component';
 import { ResourcesComponent } from './features/resources/resources.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 export const routes: Routes = [
-   
-    
-    {
-      path:'contact-us',component:ContactUsComponent
-    },
-    {
-      path:'about-us',component:AboutUsComponent
-    },
-    {path: 'Courses/Reservation', component: CourseReservationComponent},
-    {
-      path:'',
-      component:HomeComponent,
-      children:[
-        { path: '', component: CoursesListComponent }, 
-      ]
+  { path: 'Courses/Reservation', component: CourseReservationComponent },
+  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'resources', component: ResourcesComponent },
+  { path: '404', component: NotFoundComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: '', component: CoursesListComponent },
+    ]
   },
-    { 
-        path: 'Courses', 
-        component: CoursesHomeComponent, 
-        children: [
-          { path: '', component: CoursesListComponent }, 
-          { path: ':id', component: CourseDetailComponent }
-        ]
-      },
-      {
-        path:'resources',component:ResourcesComponent
-      },
-      
+  {
+    path: 'Courses',
+    component: CoursesHomeComponent,
+    children: [
+      { path: '', component: CoursesListComponent },
+      { path: ':id', component: CourseDetailComponent }
+    ]
+  },
 
-
+  { path: '**', redirectTo: '/404' } // Wildcard route should be LAST
 ];

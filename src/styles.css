@@ -162,3 +162,9 @@
   font-size: 12px;
   color: #22a0d6;
 }
+
+.btn:active {
+  outline: 2px solid #5bbae3;
+  color: #5bbae3;
+
+}

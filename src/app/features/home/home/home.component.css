@@ -113,9 +113,15 @@ gap: 8px;
 }
 .pagination-button button{
 border-radius: 10px;
-border-color: #666;
+border-color: #22A1D6;
+color: #22A1D6;
 
 }
+.pagination-button button:hover{
+
+  color: white;
+  
+  }
 
 .pagination-dot {
 width: 10px;
