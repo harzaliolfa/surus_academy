@@ -64,5 +64,26 @@
         </div>
         <button [routerLink]="['/Courses']"  routerLinkActive="router-link-active"  class="button">Explore All Programs</button>
     </div>
+    <section class="tutors-section">
+        <p class="tutors-label">Tutors</p>
+        <h2 class="section-title">Meet the Heroes</h2>
+        <p class="section-description">
+          Instructors from all over the world instruct millions of students. We offer the knowledge and abilities.
+        </p>
+      
+        <div class="tutors-container">
+          <div class="tutor-card" *ngFor="let tutor of tutors">
+            <img src="../../../../assets/tutor-image.png" alt="{{ tutor.name }}" class="tutor-image">
+            <h3 class="tutor-name">{{ tutor.name }}</h3>
+            <p class="tutor-role">{{ tutor.role }}</p>
+            <p class="tutor-bio">{{ tutor.bio }}</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon "><i class="fa fa-twitter"></i></a>
+              <a href="#" class="social-icon "><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 </div>
 

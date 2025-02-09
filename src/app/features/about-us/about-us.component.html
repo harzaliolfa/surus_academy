@@ -1,1 +1,64 @@
-<p>about-us works!</p>
+  <section class="about-us">
+    <div class="about-content">
+      <h2><span class="highlight">About Us</span></h2>
+      <h3><span class="highlight-text">Surus</span> Providing The Best Opportunities To The Students Around The Globe.</h3>
+      <p>
+        Weekend UX, is a UI/UX Design Academy in Delhi involved in User Experience and User Interface Training and Consulting. 
+        It was started in 2023 and passionate towards User Interface Design / User Experience Design, Human Computer Interaction Design. 
+        Humanoid is gushing towards competence to acquire knowledge and have a wide understanding towards the sphere through the 
+        foremost courses in the area of UI/UX Design, by strengthening up your skills, for your golden future.
+      </p>
+      <button class="btn-start">Start Now →</button>
+    </div>
+    <div class="about-images">
+      <div class="image-container">
+        <img src="../../../assets/office.png"  alt="Office Image" class="img-top">
+        <img src="../../../assets/laptop.png" alt="Workspace Image" class="img-bottom">
+      </div>
+    </div>
+  </section>
+
+
+  <div class="features-container">
+    <div class="image-section">
+      <img
+        src="../../../assets/design-lamps.png"
+        alt="Colorful light bulbs"
+        class="feature-image"
+      />
+    </div>
+    <div class="text-section">
+      <h4 class="feature-title">Features</h4>
+      <h2 class="feature-heading">
+        We are always working to provide you best of the features in all aspects.
+      </h2>
+      <p class="feature-description">
+        At WEEKENDUX the chief determination is to clear the minds of our
+        students about their goals, while making them consistent in their
+        ambitions and pushing them to be confident for their journey towards the
+        course of time.
+      </p>
+      <p class="feature-description">
+        You will find every little thing on the internet in just a click of hand,
+        but here we admire that without knowledge and practice the internet may
+        even also fail you in your life.
+      </p>
+    </div>
+  </div>
+  
+
+
+
+  <section class="benefits">
+    <h3 class="benefits-title">Our Benefits</h3>
+    <h2 class="benefits-heading">By Joining Surus Academy, One Can Avail a Lot Of Benefits.</h2>
+  
+    <div class="benefits-container">
+      <div class="benefit-card" *ngFor="let benefit of benefits; let i = index">
+        <h3 class="benefit-number">0{{ i + 1 }}</h3>
+        <h4 class="benefit-title">{{ benefit.title }}</h4>
+        <p class="benefit-description">{{ benefit.description }} <a href="#">Read More</a></p>
+      </div>
+    </div>
+  </section>
+  
