@@ -54,15 +54,14 @@
       <img src="../../../../assets/PMP.png" alt="PMP"  class="pmp"/>
       <img src="../../../../assets/doc control img.jpg" alt="Document Control">
   </div>
-  <section class="tutors-section">
+  <section style="background-color: rgb(241, 240, 240);" class="tutors-section">
     <p class="tutors-label">Explore Programs</p>
     <h2 class="section-title">Our Most Popular Class</h2>
     <p class="section-description">
       Let's join our famous class, the knowledge provided will definitely be useful for you.
     </p>
     <router-outlet></router-outlet>
-  </section>
-  <div class="pagination-button">
+    <div class="pagination-button">
       <!-- <div class="pagination">
         <div class="pagination-dot active"></div>
         <div class="pagination-dot"></div>
@@ -70,6 +69,8 @@
       </div> -->
       <button [routerLink]="['/Courses']"  routerLinkActive="router-link-active"  class="button">Explore All Programs</button>
   </div>
+  </section>
+
   <section class="tutors-section">
       <p class="tutors-label">Tutors</p>
       <h2 class="section-title">Meet the Heroes</h2>
