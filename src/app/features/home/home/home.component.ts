@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CoursesListComponent } from "../../courses/courses-home/courses-list/courses-list.component";
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -15,24 +14,12 @@ export class HomeComponent {
 
   tutors = [
     {
-      name: "Theresa Webb",
+      name: "Dhafer Jaballah",
       role: "Planning Lead",
-      bio: "Former co-founder of Planning"
-    },
-    {
-      name: "Theresa Webb",
-      role: "Planning Lead",
-      bio: "Former co-founder of Planning"
-    },
-    {
-      name: "Theresa Webb",
-      role: "Planning Lead",
-      bio: "Former co-founder of Planning"
-    },
-    {
-      name: "Theresa Webb",
-      role: "Planning Lead",
-      bio: "Former co-founder of Planning"
+      bio: "Planning, project Control",
+      img:"assets/dhafer.jfif",
+      linkdinUrl:"https://www.linkedin.com/in/surus/",
+      xUrl:"https://www.linkedin.com/in/surus/" ,
     }
   ];
 
