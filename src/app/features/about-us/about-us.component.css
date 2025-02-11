@@ -131,7 +131,7 @@ p {
 }
 
 .background-green {
-  background: rgb(224, 246, 245);
+  background: linear-gradient(145deg,rgb(224, 246, 245), #ffffff );
 }
 
 .benefit-number {
