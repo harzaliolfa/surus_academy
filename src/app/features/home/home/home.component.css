@@ -124,6 +124,7 @@ flex-grow: 0;
 .button:hover {
   background-color: #33a0dd;
   color: white;
+  border: none;
 
 }
 /*****************BLUE CIRCLES ********************/

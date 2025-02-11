@@ -20,7 +20,6 @@
     </div>
   </section>
 
-
   <div class="features-container">
     <div class="image-section">
       <img
@@ -55,7 +54,7 @@
     <p>long established fact that a reader will be distracted by the readable <br>
         long established fact till be distracted by the readable</p>
     <div class="benefits-container">
-      <div class="benefit-card" *ngFor="let benefit of benefits; let i = index">
+      <div class="benefit-card" *ngFor="let benefit of benefits; let i = index" [ngClass]="{'background-green': i % 2 == 0}">
         <h3 class="benefit-number">0{{ i + 1 }}</h3>
         <h4 class="benefit-title">{{ benefit.title }}</h4>
         <p class="benefit-description">{{ benefit.description }} <a href="#">Read More</a></p>

@@ -55,6 +55,7 @@ p{
   .about-images {
     width: 50%;
     position: relative;
+    margin-top: -80px;
   }
   
   .image-container {
@@ -106,7 +107,7 @@ p{
   .image-section {
     flex: 1;
     display: flex;
-    justify-content: center;
+    width: 20%;
     align-items: center;
 
   }
@@ -117,10 +118,13 @@ p{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 50%;
     height: 400px;
+    margin-left: 20%;
   }
   
   .text-section {
     flex: 1;
+    width: 60%;
+    margin-right: 10%;
   }
   
   .feature-title {
@@ -158,17 +162,21 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 30px;
   }
   
   .benefit-card {
     background: white;
-    width: 250px;
+    width: 380px;
+    height: 170px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
+  }
+  .background-green{
+    background: rgb(224, 246, 245);
   }
   
   .benefit-number {

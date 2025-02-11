@@ -40,7 +40,10 @@ export class CourseReservationComponent implements OnInit {
   
   
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     this.getSelectedCourseName();
+
   }
 
   handleSubmit() {

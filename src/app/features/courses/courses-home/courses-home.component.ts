@@ -16,6 +16,7 @@ export class CoursesHomeComponent {
     // Scroll to the top of the page when the component initializes
     window.scrollTo(0, 0);
   }
+  
   images = ["assets/Courses-banner1.PNG", "assets/Courses-banner2.jpg", "assets/Courses-banner3.jfif"];
   @ViewChild('targetSection') targetSection!: ElementRef;
 

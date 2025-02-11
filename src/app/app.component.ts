@@ -14,4 +14,5 @@ import { HomeComponent } from "./features/home/home/home.component";
 })
 export class AppComponent {
   title = 'surus-academy-front';
+  
 }
