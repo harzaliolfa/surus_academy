@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ContactMessage } from '../../shared/models/contact';
 import { ContactService } from '../../shared/data-access/contact.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-contact-us',
-  imports: [FormsModule, ReactiveFormsModule ],
+  imports: [FormsModule, ReactiveFormsModule, RouterModule, CommonModule ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })

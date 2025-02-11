@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
+  ngOnInit(): void {
+    // Scroll to the top of the page when the component initializes
+    window.scrollTo(0, 0);
+  }
   benefits = [
     { title: "Standardization", description: "Ensures a consistent training experience worldwide." },
     { title: "Reduced Costs", description: "No cost to reproduce materials, thanks to mobile learning." },

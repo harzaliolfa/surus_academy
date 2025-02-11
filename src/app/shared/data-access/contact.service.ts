@@ -21,7 +21,6 @@ export class ContactService {
 
     emailjs.send(serviceID, templateID, templateParams, userID)
     .then(() => {
-      alert('Message sent successfully!');
       contactMessage.name = '';
       contactMessage.email = '';
       contactMessage.message = '';

@@ -134,8 +134,9 @@ border-radius: 50%;
 background-color: #33a0dd; /* Blue color for active dot */
 }
 .button:hover {
-background-color: #33a0dd;
-color: white;
+  background-color: #33a0dd;
+  color: white;
+  border: none;
 
 }
 /*****************BLUE CIRCLES ********************/

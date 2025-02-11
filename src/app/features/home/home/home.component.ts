@@ -12,6 +12,11 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
 
+  ngOnInit(): void {
+    // Scroll to the top of the page when the component initializes
+    window.scrollTo(0, 0);
+  }
+
   tutors = [
     {
       name: "Dhafer Jaballah",
