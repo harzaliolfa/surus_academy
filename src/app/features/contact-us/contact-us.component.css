@@ -1,8 +1,9 @@
-.form-group ::placeholder{
+.form-group ::placeholder {
   font-size: 13px;
 }
+
 .btn {
-  width: 30vw; /* Your specified width */
+  width: 30vw;
   margin: 0 auto;
   display: block;
   padding: 10px;
@@ -12,166 +13,148 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
 .form-header {
   color: #22A1D6;
   text-decoration: underline;
   text-underline-offset: 0.4em;
-  margin-bottom: 20px; /* Added for spacing */
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px ;
+}
+.heading{
+  padding-bottom: 15px;
+  font-weight: bold;
 }
 
 .wrapper {
-  background: linear-gradient(to bottom, #22a0d64e 1%, #ffffff 30%);    
+  background: linear-gradient(to bottom, #22a0d64e 1%, #ffffff 30%);
   position: relative;
-  overflow: hidden; /* Prevent content from overflowing */
+  overflow: hidden;
   width: 100%;
   z-index: 1;
 }
-.container {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    margin: 100px 60px;
-    width: 60%;
-    margin-left: 20%;
-    z-index: 0;
-  }
-  
-  h2.text-primary {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
-  form .form-control {
-    border-radius: 8px;
-  }
-  
-  .btn-primary {
-    background-color: #00aaff;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    padding: 10px;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0088cc;
-  }
-  
-  iframe {
-    border: 1px solid #ddd;
-  }
-  
-  .address {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
 
-  .message-section{
-    width: 38%;
-    margin: auto 6%;
-  }
+.form-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  margin-top: 70px;
+  z-index: 0;
+  top: 0;
+}
 
-  .address-section{
-    width: 40%;
-  }
+.form-content {
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  height:  600px;
 
-  .address-section p{
-    font-size: 1vw;
+}
+form{
+  width:50% ;
+  padding:  0px 8%;
+}
 
-  }
-  .message-section p {
-    margin-top: -50px;
-    margin-bottom: 30px;
-  }
-  .dots{
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, #b1b1b158 20%, transparent 30%) center/22px 22px;
-    opacity: 0.5;
-    z-index: -1;
-    }
-    .top-right {
-        top: 100px;
-        right: 200px;
-      }
-    
-    .bottom-left{
-        bottom:80px;
-        left: 200px;
-    }
-    .shape {
-        position: absolute;
-        border: 2px solid #007acc;
-        border-radius: 4px;
-        opacity: 0.8;
-        z-index: 1;
-        overflow: hidden;
-      }
-      .square{
-        width: 100px;
-        height: 100px;
-      }
-      .rectangle{
-        width: 200px;
-        height: 100px;
-      }
-      .rectangle.bottom-left{
-        bottom: 10px;
-        left: -70px;
-      }
-    
-      .shape.bottom-left {
-        bottom: -60px;
-        left: 30px;
-      }
-      
-      .shape.top-left {
-        top: 50px;
-        left: 50px;
-      }
-      .shape.bold{
-        border: 4px solid #22A1D6;
-      }
+.address-section {
+  width: 40%;
+}
 
 
-  @media (max-width: 1000px) {
+.message-adress-section {
+  display: flex;
+}
 
-    .row{
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center elements horizontally */
-      gap: 15px; /* Add spacing between elements */
-      text-align: center; /* Ensure text is centered */
-    }
+.address {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
 
-    .message-section{
-      width: 90%;
-      margin: auto 6%;
-    }
-    
-  .address-section{
-    display: flex;
-    width: 90%;
+
+
+.address-section p {
+  font-size: 1vw;
+}
+
+.message-section {
+  width: 60%;
+}
+
+.message-section p {
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+h2.text-primary {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+form .form-control {
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: #00aaff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0088cc;
+}
+
+iframe {
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 1000px) {
+  .form-content{
+    height: 700px;
   }
-
-  .address-section p{
-    font-size: 11.5px;
-
+  .message-adress-section {
+    display: block;
   }
-  .address{
-    width: 50%;
+ form{
+  width: 100%;
+ }
+ .message-section{
+  width: 90%;
+  margin: auto 6%;
+}
 
-  }
-    
-  iframe {
-    height: 170px;
-  width: 50%;
+.address-section{
+display: flex;
+width: 90%;
+}
+
+.address-section p{
+font-size: 11.5px;
+
+}
+.address{
+width: 50%;
+
+}
+
+iframe {
+height: 170px;
+width: 50%;
 margin: auto 5%;  }
 .message-section p{
-  font-size: 14px;
-  margin-top: -20px;
-  margin-bottom: 10px;
-  margin-left: -50%;
+font-size: 14px;
+margin-top: 250px;
+margin-bottom: 10px;
+margin-left: -50%;
 }
-      }     
+
+
+}

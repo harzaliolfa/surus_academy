@@ -1,4 +1,3 @@
-
 <div class="wrapper">
   <div class="dots top-right"></div>
   <div class="dots bottom-left"></div>
@@ -8,109 +7,105 @@
   <div class="shape square bold" style="bottom: -70px; right: 50px;"></div>
   <div class="shape rectangle bold" style="bottom: 10px; right: -90px;"></div>
   <div class="shape square bold" style="bottom: -50px; right: 80px;"></div>
-<div class="container py-5 shadow-lg p-3 mb-5 bg-white rounded">
-    <div class="row">
-      <div class="col-12 text-center mb-4">
-        <div class="form-header">
-          <h2>Contact Us</h2>
-        </div>
-      </div>
+  <div class="form-container">
+    <div class="form-content shadow-lg p-3 mb-5 bg-white rounded" *ngIf="!isSubmitted">
+    <div class="form-header">
+      <h2>Contact us</h2>
     </div>
-  
-    <div class="row">
-      <!-- Left Side: Form -->
-      <div class="message-section col-md-6">
-        <p><strong>Leave us a message</strong></p>
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-          <div class="form-group mb-3 input-container">
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              formControlName = "name"
-              placeholder=""
-            />
-            <label for="name" >Full Name</label>
-          </div>
-          <div class="form-group mb-3 input-container">
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              formControlName = "email"
-              placeholder=""
-            />
-            <label for="email">Email</label>
-          </div>
-          <div class="form-group mb-3 input-container">
-            <textarea
-              class="form-control"
-              id="message"
-              formControlName = "message"
-              rows="4"
-              placeholder=""
-            ></textarea>
-            <label for="message">Message</label>
-          </div>
-          <button  [disabled]="this.contactForm.invalid" type="submit" class=" btn btn-primary w-100">
-            Send
-          </button>
-        </form>
-      </div>
-  
-      <!-- Right Side: Contact Info -->
-      <div class="address-section col-md-6">
-        <address>
-          <p><strong>Surus Academy</strong></p>
-          <p>
-            B 37/3 Ground Floor Double Story, <br />
-            Near Garden Chowk, Tunis: 1003
-          </p>
-          <p>
-            <strong>Phone:</strong> +216 95992727<br />
-            <strong>Email:</strong> <a href="mailto:hello@info.com.tn"> surus.com.tn</a>
-          </p>
-        </address>
+    <div class="message-adress-section">
 
-        <!-- Map -->
-        <iframe
-          class=" rounded"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509076!2d-122.41941548468189!3d37.77492977975966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d9167e5f%3A0x7d28f6f6f5fd9b80!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1618244635170!5m2!1sen!2sus"
-          width="100%"
-          height="200"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+    <form  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="heading">
+        Send  us a message
       </div>
+      <div class="form-group mb-3 input-container">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName = "name"
+          placeholder=""
+        />
+        <label for="name" >Full Name</label>
+      </div>
+      <div class="form-group mb-3 input-container">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName = "email"
+          placeholder=""
+        />
+        <label for="email">Email</label>
+      </div>
+      <div class="form-group mb-3 input-container">
+        <textarea
+          class="form-control"
+          id="message"
+          formControlName = "message"
+          rows="4"
+          placeholder=""
+        ></textarea>
+        <label for="message">Message</label>
+      </div>
+      <button  [disabled]="this.contactForm.invalid" type="submit" class=" btn btn-primary w-100">
+        Send
+      </button>
+    </form>
+    <!-- Right Side: Contact Info -->
+    <div class="address-section col-md-6">
+      <address>
+        <p><strong>Surus Academy</strong></p>
+        <p>
+          B 37/3 Ground Floor Double Story, <br />
+          Near Garden Chowk, Tunis: 1003
+        </p>
+        <p>
+          <strong>Phone:</strong> +216 95992727<br />
+          <strong>Email:</strong> <a href="mailto:hello@info.com.tn"> surus.com.tn</a>
+        </p>
+      </address>
+
+      <!-- Map -->
+      <iframe
+        class=" rounded"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509076!2d-122.41941548468189!3d37.77492977975966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d9167e5f%3A0x7d28f6f6f5fd9b80!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1618244635170!5m2!1sen!2sus"
+        width="100%"
+        height="200"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
     </div>
   </div>
-  <div>
-    <div *ngIf="isSubmitted">
-      <div class="alert alert-success" >
-        <strong>Success!</strong> Your reservation has been submitted. Check your email for more details. Thank you!
-      
-      </div>
-        <div class="button-container">
-          <a  [routerLink]="['/Courses']"  routerLinkActive="active-link" class="btn btn-outline-primary">
-              Browse More Courses 
-              <span class="button-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="16" fill="currentColor" class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
-                      <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/>
-                    </svg>
-              </span>
-            </a>
-          <a [routerLink]="['/contact-us']" routerLinkActive="active-link" class="btn btn-primary" >
-              Contact Us
-              <span class="button-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
-                      <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/>
-                    </svg>
-              </span>
-            </a>
-  
-        </div>
     </div>
 
-</div>
-</div>
+    <div>
+      <div *ngIf="isSubmitted">
+        <div class="alert alert-success" >
+          <strong>Success!</strong> Your reservation has been submitted. Check your email for more details. Thank you!
+        
+        </div>
+          <div class="button-container">
+            <a  [routerLink]="['/Courses']"  routerLinkActive="active-link" class="btn btn-outline-primary">
+                Browse More Courses 
+                <span class="button-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="16" fill="currentColor" class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
+                        <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/>
+                      </svg>
+                </span>
+              </a>
+            <a [routerLink]="['/contact-us']" routerLinkActive="active-link" class="btn btn-primary" >
+                Contact Us
+                <span class="button-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
+                        <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/>
+                      </svg>
+                </span>
+              </a>
+    
+          </div>
+      </div>
+
+  </div>
+  </div>
