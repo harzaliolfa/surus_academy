@@ -6,9 +6,10 @@ a {
 }
 .my-footer{
     background-color: #101722;
-    height: 430px;
-    padding: 10px;
-    overflow-x: hidden;
+    height: 350px;
+    overflow: hidden;
+    padding-left: 5%;
+   
 
 }
 .my-container{
@@ -16,7 +17,6 @@ a {
 }
 
 .footer-logo{
-    margin: 2%;
 }
 h4{
     color: #808a9c;
@@ -41,16 +41,11 @@ h4{
     color: #808a9c;
     margin-left: 5%;
     position: relative;
-    max-height: 100px;
 }
-.footer-bottom p{
-    margin-top: 150px;
+.footer-bottom p, .my-icons{
+    margin-top: 90px;
 }
 
-.my-icons{
-    margin-top: 150px;
-
-}
 
 .my-icon {
     margin: 35px;
@@ -58,24 +53,28 @@ h4{
 }
 
 @media (max-width: 769px) {
+    .my-container{
+        margin-top: 0px;
+    }
+
+    .my-footer{
+        height: 400px;
+    }
 
     .footer-section{
         margin-left: 10%;
     }
-    .footer-bottom {
-       
-    }
     .all-right-reserved {
         width: 50%;
-        max-width: 100%;
         box-sizing: border-box;
-        margin-top: -50px;
+        margin-top: -3%;
+
     }
     .my-icons {
         width: 50%;
         max-width: 100%;
         box-sizing: border-box;
-        margin-top: 100px;
+        margin-top: 12%;
         
     }
     .my-icon{
@@ -97,7 +96,7 @@ h4{
         width: 50%;
         max-width: 100%;
         box-sizing: border-box;
-        margin-top: 80px;
+        margin-top: 12px;
         
     }
     .my-icon{

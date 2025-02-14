@@ -13,8 +13,8 @@ import { RouterOutlet } from '@angular/router';
 export class CoursesHomeComponent {
 
   ngOnInit(): void {
-    // Scroll to the top of the page when the component initializes
-    window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);}
   }
   images = ["assets/Courses-banner1.PNG", "assets/course-banner4.jpg", "assets/courses-banner-5.jpg"];
   @ViewChild('targetSection') targetSection!: ElementRef;

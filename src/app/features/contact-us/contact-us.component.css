@@ -134,6 +134,8 @@ iframe {
 .address-section{
 display: flex;
 width: 90%;
+margin-top: 25px;
+margin-left: 5%;
 }
 
 .address-section p{
@@ -157,4 +159,9 @@ margin-left: -50%;
 }
 
 
+}
+@media (max-width: 640px){
+  .form-content{
+    width: 90%;
+  }
 }

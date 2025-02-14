@@ -22,6 +22,8 @@ export class CourseDetailComponent {
   ngOnInit(){
     const courseId =this.route.snapshot.params['id'];
     this.loadCourse(courseId);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);}
   }
 
   
